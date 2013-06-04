@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es" style="min-width:1024px;">
+  <!-- modificado -->
+  <head>
+    <meta charset="utf-8">
+    <title>Supersub</title>
+    
+    <!--Jquery and plugins-->
+    <script type="text/javascript" src="js/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.waitforimages.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.html5storage.min.js"></script>
+    
+    <!--Bootstrap-->
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    
+    
+    <!--Player jquery-->   
+    <script type="text/javascript" src="js/player/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/player/jplayer.playlist.min.js"></script>
+	
+	<!--Funciones web-->
+	
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/search.js" ></script>
+	
+	
+	<!--Estilos CSS-->
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+	<link href="css/player/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+   
+  
+  </head>
+  <body>
+  	
+  	
+  	<noscript>
+    	<div id="no-script">
+    		<h1>Necesitas tener activado Javascript para poder visualizar correctamente esta web</h1>	
+    	</div>
+    </noscript>
+  	
+  	
+  	<!--Div login-->
+  	<div id="login-page" class="">
+  		<div class="container">
+	      <div class="login-container">
+	        <form class="form-signin" id="login-form" action="#">
+	          <div class="form-signin-heading"><div id="logo-login"></div></div>
+	            <div class="control-group" id="control-grupo-usuario">
+	              <div class="controls">
+	                <input class="input-block-level" data-rel="tooltip" type="text" id="usuario" placeholder="Usuario" title="Usuario vacío" data-placement="right">
+	              </div>
+	          </div>
+	          <div class="control-group" id="control-grupo-passwd">
+	            <div class="controls">
+	              <input class="input-block-level" placeholder="Contraseña" type="password" id="passwd" data-rel="tooltip" title="Contraseña vacía" data-placement="right">
+	            </div>
+	          </div>
+	          <button class="btn btn-large btn-block btn-warning" type="button" id="login">Iniciar sesión</button>
+	          <br />
+	          <div class="alert alert-error" id="error" style="display:none; text-align:center;">Nombre de usuario y contraseña incorrectos.</div>
+	        </form>
+	        </div>
+	    </div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<!--Comienzo Supersub-->
+  	<div id="wrapper" class="hide">
+  		
+		<div id="main-nav">
+		  <a href="#"><span id="logo"></span></a>
+		  <ul id="nav-items">
+		  	<li>
+		  		<a data-href="suggest" id="nav-search" class="">Buscar</a>
+		  		<!-- Formulario de busqueda  -->
+		  		<div class="busqueda-layer hide"></div>
+				<div id="busqueda" class="hide" style="width:500px;">
+					
+					<div class="flecha"></div>
+						<div id="busqueda-input-wrapper">
+    						<div class="campo-busqueda">
+            					<input placeholder="Buscar…" autocomplete="off" class="busqueda-input">
+							</div>
+						</div>
+						<div id="busqueda-vacia" class=""><span class="busqueda-vacia-text">Busca tu música.</span></div>
+						<div id="busqueda-no-encontrado" class="hide"><span class="busqueda-no-encontrado-texto">No se ha encontrado nada.</span></div>
+						<div id="resultados-busqueda" class="hide">
+							
+							<h3 id="suggest-artists-title">
+      							<a href="#" class="title-link">Artistas</a>
+      						</h3>
+      						<ul id="sugerir-artistas">
+							</ul>
+							<h3 id="sugerir-titulo-album">
+								<a href="#" class="title-link">Álbumes</a>
+							</h3>
+							<ul id="suggest-albums">								
+							</ul>
+						</div>		
+				</div>
+				<!-- Fin formulario de busqueda --> 
+				
+		  	</li>
+		  	<li>
+		  		<a id="nav-home" class="current">Novedades</a>
+		  	</li>
+		  	<li>
+		  		<a id="nav-artists">Artistas</a>
+		  	</li>
+		  	<li>
+		  		<a id="nav-albumes">Álbumes</a>
+		  	</li>
+		  	<li class="item-profile"><a data-href="playlist" id="nav-profile">Mi cuenta</a>
+		  		
+		  	</li>
+		  </ul>
+		</div>
+		<div id="main">
+					<div id="carga" class="hide"></div>
+					<div id="home"></div>
+					<div id="volver" class="hide"></div>	
+					<div id="navigation" class="hide"></div>
+					<div id="artistas" class="hide effect"></div>
+					<div id="albumes" class="hide effect"></div>
+					<div id="cuenta" class="hide effect">
+						<div id="cuenta-container">
+							<div id="usuario-micuenta"><h2 class="username">Usuario:  </h2></div>
+							<div id="cuenta-wrapper">
+								
+								<div id="cerrar-sesion-container">
+									<h2>Cerrar sesión</h2>
+									<button class="btn btn-block btn-warning" type="button" id="cerrar-sesion">Cerrar sesión</button>
+								</div>
+								
+								<div id="datos-container">
+									
+									<h2>Cambiar contraseña</h2>
+									<form class="form-changepass" id="changepass-form" action="#">
+					            		<div class="control-group control-grupo-usuario">
+					              			<div class="controls">
+					              				<label for="passwd1">Introduzca su nueva contraseña</label>
+					                			<input id="passwd1" class="input-block-level" type="password"  placeholder="Contraseña" />
+					              			</div>
+					          			</div>
+					          			<div class="control-group control-grupo-passwd">
+					            			<div class="controls">
+					            				<label for="passwd2">Repita de nuevo su contraseña</label>
+					              				<input id="passwd2" class="input-block-level" placeholder="Contraseña" type="password" />
+								            </div>
+					          			</div>
+					          			<button class="btn btn-block btn-warning" type="button" id="change-passwd">Cambiar contraseña</button>
+					          			<br />
+					          			 <div class="alert alert-error hide" id="error_samepass" style="text-align:center;">Las contraseñas no coinciden o los campos no se han rellenado correctamente.</div>
+					          			  <div class="alert alert-error hide" id="error_notchanged" style="text-align:center;">No se ha podido cambiar su contraseña.</div>
+					          			   <div class="alert alert-success hide" id="success_changedpasswd" style="text-align:center;">Contraseña cambiada correctamente.</div>
+					        		</form>
+								</div>
+							</div>
+						</div>
+				</div>		
+		</div>
+		<!-- Player -->
+		<div id="player-nav">
+			<div id="cover-player-wrapper">
+				<div id="zona-cover">
+					<div id="cover-art">
+						<a class="imagen-player-a">
+							<div class="imagen-player-wrapper">
+								<div class="imagen-player" style=""></div>
+							</div>
+							<div class="img-player-placeholder"></div>
+						</a>
+					</div>
+					
+				</div>
+			</div>	
+			<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div id="jp_container_1" class="jp-audio">
+					<div class="jp-type-playlist">
+						<div class="jp-gui jp-interface">
+							<ul class="jp-controls">
+								<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+								<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+								<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+								<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+								<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+							</ul>
+							<div class="jp-progress">
+								<div class="jp-seek-bar">
+									<div class="jp-play-bar"></div>
+								</div>
+							</div>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+							<div class="jp-time-holder">
+								<div class="jp-current-time"></div>
+								<div class="jp-duration"></div>
+							</div>
+							<ul class="jp-toggles">
+								<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+								<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+								<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+								<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+							</ul>
+						</div>
+						<div class="jp-playlist hide">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+						<div class="jp-no-solution">
+							<span>Actualización necesaria</span>
+							Para reproducir música en Supersub debes actualizar tu navegador a una versión que tenga soporte para MP3 con HTML o descargar la última versión de <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash player</a>.
+						</div>
+					</div>
+				</div>	
+			</div>					
+		</div>
+  </body>
+</html>

@@ -1,0 +1,1071 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  font-size: 100%;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  vertical-align: baseline;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  
+}
+
+body {
+  background-color: #ECEBE8;
+  bottom: 0;
+  color: #333333;
+  font-family: 'Lucida Grande',Arial,sans-serif;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 1024px;
+}
+
+#wrapper {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  min-height: 600px;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+#main-nav {
+  background: none repeat scroll 0 0 #2C2C2D;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 90px;
+}
+
+#main-nav {
+  z-index: 0;
+}
+
+#main-nav, #player-nav {
+  height: 100%;
+  text-align: left;
+  vertical-align: top;
+}
+
+#player-nav{
+	z-index: 300;	
+}
+/* Estilo del menu */
+#main-nav > ul > li > a {
+  -moz-user-select: -moz-none;
+  background: url("../img/sprite-menu.png") no-repeat scroll 10px 0 transparent;
+  color: #ABABAB;
+  cursor: pointer;
+  display: block;
+  font-size: 11px;
+  margin: 0 0 5px;
+  overflow: hidden;
+  padding: 40px 5px 0;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 1px #000000;
+  width: 65px;
+}
+
+
+#main-nav ul a.current {
+	color:#F1F1F1;
+}
+
+#main-nav a#nav-search.current {
+  background-position: 10px -55px;
+}
+
+#main-nav a#nav-home{
+	background-position: -48px 0;
+}
+
+#main-nav a#nav-home.current {
+	background-position: -48px -55px;
+}
+
+#main-nav a#nav-artists{
+	background-position: -106px 0;
+}
+
+#main-nav a#nav-artists.current {
+	background-position: -106px -55px;
+}
+
+#main-nav a#nav-albumes{
+	background-position: -161px 0;
+}
+
+#main-nav a#nav-albumes.current {
+	background-position: -161px -55px;
+}
+
+
+#main-nav a#nav-profile{
+	background-position: -213px 0;
+}
+
+#main-nav a#nav-profile.current {
+	background-position: -213px -55px;
+}
+
+#logo {
+  background: url("../img/logo-pequeno.png") no-repeat scroll transparent;
+  border-bottom: 1px solid #1F1F1F;
+  display: block;
+  height: 95px;
+  padding: 4px 0;
+  width: 90px;
+}
+
+#main-nav > ul {
+  border-top: 1px solid #3B3B3C;
+  display: block;
+  list-style: none outside none;
+  margin: 0;
+  padding: 5px 0 0;
+  text-align: center;
+  width: 87px;
+}
+
+#main-nav ul li {
+  -moz-user-select: -moz-none;
+  display: block;
+  padding: 0 0 10px 8px;
+}
+
+#main-nav a#nav-profile {
+  padding-top: 45px;
+}
+
+#main-nav li.settings-link a.current {
+  background-position: -161px -120px;
+}
+
+.item-profile {
+  bottom: 40px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#main-nav .settings-link {
+  border-top: 1px solid #090909;
+}
+/* Fin estilo menu */
+
+#main {
+  background: #ECEBE8;
+  z-index: 0;
+  bottom: 0;
+  left: 90px;
+  overflow: auto;
+  overflow-x:hidden;
+  position: absolute;
+  right: 250px;;
+  top: 0;
+}
+
+#main > * > h2.novedades_home {
+	margin: 0px 0 15px 50px;
+	font-size:18px;
+	font-weight:bold;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+ 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.77);	
+}
+
+#main > div {
+  transition: transform 0.35s ease 0s;
+  -webkit-transition:-webkit-transform 0.35s ease 0s;
+
+}
+
+/**
+ * 	Zona player
+ * 
+ */
+
+#player-nav {
+  right: 0;
+}
+
+#player-nav {
+  background: none repeat scroll 0 0 ;
+  border-left: 1px solid #BBBCBC;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: right 0.3s ease 0s;
+  width: 250px;
+  text-align: center;
+}
+
+#cover-player-wrapper{}
+
+#zona-cover{
+  background: none repeat scroll 0 0 black;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing:content-box;
+}
+
+#cover-art {
+  background-color: #EEEEEE;
+  height: 250px;
+  width: 250px;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing:content-box;
+}
+
+#cover-art a {
+	display:block;
+	width:250px;
+	height:250px;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing:content-box;	
+}
+
+.imagen-player-a {
+  border: 0 none;
+  color: transparent;
+  overflow: visible;
+  position: relative;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.imagen-player-wrapper {
+	background:url('../img/nocover250.png');
+	height:100%;
+	position:relative;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing:content-box;	
+}
+
+.imagen-player {
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+  	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing:content-box;
+}
+
+.img-player-placeholder {
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+}
+
+#main-nav, #player-nav {
+  height: 100%;
+  text-align: left;
+  vertical-align: top;
+  z-index: 300;
+}
+
+#volver {
+	z-index: 50;
+	width: 50%;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	bottom: 0;
+	min-height: 100%;
+	background: transparent;
+	transform: translateX(0%);
+	-webkit-transform:translateX(0%);
+	position:fixed;
+	background: url("../img/arrow.png") no-repeat;
+	background-position:center left;
+	cursor: pointer;
+}
+
+
+#navigation {
+	position:absolute;
+	background:#ECEBE8;
+	z-index:100;
+	width:100%;
+	transform: translateX(100%) translateZ(0px);
+  	transition: transform 0.35s ease 0s;
+  	-webkit-transform:translateX(100%) translateZ(0px);
+  	-webkit-transition:-webkit-transform 0.35s ease 0s;
+  	bottom:0px;
+  	top:0px;
+}
+
+#disco-container {
+	border-left: 4px solid #2C2C2D;
+	position:relative;
+	padding: 10px 0 0 20px;
+	width:78%;
+	top:0;
+	bottom:0;
+	min-height:100%;	
+}
+
+#artista-container {
+	border-left: 4px solid #2C2C2D;
+	position:relative;
+	padding: 10px 0 0 20px;
+	width:76%;
+	top:0;
+	bottom:0;
+	min-height:100%;
+}
+
+#main > div.navigation-effect{
+	transform: translateX(20%) translateZ(10px);
+	-webkit-transform:translateX(20%) translateZ(10px);	
+}
+
+#home {
+	z-index:0;
+	position:absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.effect{
+	transform: translateX(100%);
+  	-webkit-transform:translateX(100%);
+}
+
+#artistas, #albumes{
+	z-index:0;
+	position:absolute;
+	width:100%;
+	top: 0;
+}
+
+.cover-cd {
+	max-width:128px;
+	max-height: 128px;
+	clear:both;	
+	float:left;
+	display:block;
+	border-radius:4px;	
+}
+
+.cover-cd-big {
+	max-width:150px;
+	max-height: 150px;
+	clear:both;	
+	float:left;
+	display:block;
+	border-radius:4px;	
+}
+
+.wrapper-coverArt{
+	height:100%;
+	width:100%;
+ 	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2),inset 0 0 1px rgba(0,0,0,0.4),0 1px 0 rgba(255,255,255,0.5);
+  	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2),inset 0 0 1px rgba(0,0,0,0.4),0 1px 0 rgba(255,255,255,0.5);
+  	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2),inset 0 0 1px rgba(0,0,0,0.4),0 1px 0 rgba(255,255,255,0.5);
+}
+
+.inner-imagen-disco {
+	background: url('../img/nocover160.png') no-repeat transparent;
+}
+
+.thumbnail {padding:0;}
+
+.disco-album {
+	position:absolute;
+	margin-left: 168px;
+	font-weight:bold;
+	font-size:20px;
+	width:100%;
+}
+
+.disco-artist {
+	position:absolute;
+	padding-left:168px;
+	height:32px;
+	top: 20px;	
+}
+
+.disco-header {	
+	position:relative;
+	display:block;
+	margin-bottom: 160px;
+}
+
+.cf:before, .cd:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;	
+}
+
+.overflow-y {
+	overflow-y: auto;
+}
+	
+.overflow-hidden{
+	overflow: hidden;
+}
+
+
+ /* Formulario de busqueda  */
+
+#busqueda-vacia {
+	width:auto;
+	height:300px;
+	position:relative;
+	z-index:1020;
+	background: url('../img/search/search-big.png') no-repeat #ECEBE8;
+	background-position:center;
+	text-align:center;
+}
+
+.busqueda-vacia-text {
+	font-size:20px;
+	font-weight:bold;
+	padding: 50px 0 0 0;
+	line-height:8;
+}
+
+#busqueda-no-encontrado {
+	width:auto;
+	height:300px;
+	position:relative;
+	z-index:1020;
+	background: url('../img/search/no-encontrado.png') no-repeat #ECEBE8;
+	background-position:center;
+	text-align:center;		
+}
+
+.busqueda-no-encontrado-texto {
+	font-size:20px;
+	font-weight:bold;
+	padding: 50px 0 0 0;
+	line-height:8;	
+}
+
+.busqueda-layer {
+	
+	position:fixed;
+	background:transparent;
+	width:100%;
+	height:100%;
+	z-index:1009;
+	top:0;	
+}
+
+#busqueda{
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  left: 0;
+  max-width: 276px;
+  padding: 1px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  white-space: normal;
+  padding:0;
+  z-index: 1010;
+  opacity:1;
+  margin-left:80px;
+  top:120px;
+}
+
+#busqueda-wrapper {
+  position: relative;
+}
+
+#busqueda-input-wrapper {
+  background: url("../img/search/bg_search.png") repeat-x scroll #C0C0C0;
+  border-bottom: 1px solid #919191;
+  border-radius: 4px 4px 0 0;
+  height: 25px;
+  padding: 7px;
+}
+
+.campo-busqueda{
+  position: relative;
+}
+
+.busqueda-input:focus, .busqueda-input.focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 4px 0 #DFDFDF, 0 1px 2px 1px #ffde25 inset;
+}
+
+.busqueda-input {
+  background: #ffffff;
+  box-shadow: 0 1px 0 0 #E7E7E7, 0 1px 2px 1px #DFDFDF inset;
+  position: relative;
+  transition: border 0.1s linear 0s, box-shadow 0.1s linear 0s;
+  z-index: 2;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #ACACAC;
+  border-radius: 14px 14px 14px 14px;
+  color: black;
+  display: block;
+  font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+  font-size: 13px;
+  height: 25px;
+  line-height: 17px;
+  margin: 0 auto;
+  outline: 0 none;
+  padding: 3px 22px 3px 28px;
+  width: 100%;
+}
+
+#resultados-busqueda:before {
+  background: none repeat scroll 0 0 rgba(170, 170, 170, 0.1);
+  border-right: 1px solid #E8E8E8;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 27px;
+}
+
+#resultados-busqueda {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.94);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+#resultados-busqueda li.selected, #resultados-busqueda #sugerir-todos.selected {
+  background: none repeat scroll 0 0 #E1E1E0;
+  outline: 0 none;
+}
+
+#resultados-busqueda a#sugerir-todos {
+  color: #2F2F2F;
+  margin: 4px 0;
+  padding-left: 60px;
+  position: relative;
+}
+
+#sugerir-todos.img {
+  height: 16px;
+  left: 33px;
+  position: absolute;
+  top: 3px;
+  width: 20px;
+}
+
+.img {
+  border: 1px solid #E0E0E0;
+  height: 18px;
+  left: 33px;
+  position: absolute;
+  top: 2px;
+  width: 18px;
+}
+
+#suggest-artists-title {
+  background-position: 0 -62px;
+}
+
+* > div.caption > p, div.caption > h5  {
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+* > div.caption > p {
+	font-size: 13px;
+}
+
+div.caption > h5 {
+	font-size: 14px;
+}
+
+h3 {
+  color: #9F9F9F;
+  cursor: default;
+  font-size: 12px;
+  font-weight: normal;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue','Helvetica',sans-serif;
+}
+
+#resultados-busqueda ul {
+  padding: 0 0 4px;
+}
+
+#resultados-busqueda li, #suggest-history li {
+  height: 24px;
+  line-height: 0;
+  color: #444444;
+}
+
+#resultados-busqueda a, #suggest-history a {
+  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") repeat scroll 0 0 transparent;
+  color: inherit;
+  display: block;
+  font-size: 13px;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 0 14px 0 58px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  z-index: 20;
+}
+
+#busqueda > #resultados-busqueda >ul > li {
+	padding:0;	
+}
+
+a {
+  color: #444444;
+}
+
+#resultados-busqueda h3 > a {
+  color: inherit;
+  display: inline;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: none;
+}
+
+#resultados-busqueda li, #suggest-history li {
+  color: #2F2F2F;
+  position: relative;
+}
+
+.cover-img {
+  height: 18px;
+  opacity: 1;
+  transition: opacity 0.2s ease 0s;
+  width: 18px;
+}
+
+#sugerir-titulo-album{
+  background-position: 0 -122px;
+}
+
+#resultados-busqueda li.selected, #suggest #sugerir-todos.selected, #suggest-history li.selected {
+  background: #E1E1E0;
+  outline: 0 none;
+}
+
+#resultados-busqueda li, #suggest-history li {
+  color: #2F2F2F;
+  position: relative;
+}
+
+#resultados-busqueda li, #suggest-history li {
+  height: 24px;
+  line-height: 0;
+}
+
+#resultados-busqueda li.selected, #resultados-busqueda #sugerir-todos.selected, #suggest-history li.selected {
+  background: none repeat scroll 0 0 #E1E1E0;
+  outline: 0 none;
+}
+
+/* Estilo de las tablas */
+.table tr th {
+	font-size:14px;
+}
+.table tr td {
+	font-size:12px;
+	
+}
+
+.table th, .table td {
+	padding:5px;	
+}
+
+.table {
+	border:1px solid #DDDDDD;
+	background:#F9F9F9;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor:default;
+}
+
+.table tr.playing {	
+	background:#ffcc00;
+} 
+
+.table tr:not(:first-child):hover {
+	background: #BBBCBC;
+}
+
+
+/* Estilo para donde se muestran todos los álbumes de un artista */
+
+#todos-discos {
+	background:#ECEBE8;
+	padding: 10px 0 0.1px 10px;
+	width: 79%;
+	height:100%;
+	top:0;
+	bottom:0;
+	min-height:100%;
+	position:relative;
+}
+
+.artist-header {	
+	position:relative;
+	display:block;
+	margin-bottom: 160px;
+}
+
+#todos-discos > * > .disco-artist {
+	position:absolute;
+	margin-left: auto;
+	font-weight:bold;
+	font-size:20px;
+	width:100%;	
+}
+
+.lista-todos-discos {
+  list-style: none outside none;
+  padding: 0;
+}
+
+.cover-album-wrapper {
+	left:0;
+	top:1px;
+}
+.cover-album {}
+
+.imagen-wrapper {
+	position:absolute;	
+}
+
+.imagen-wrapper img {
+	border-radius: 4px 4px 4px 4px;
+	max-height:180px;
+	max-width: 180px;
+}
+
+.info-album{
+	padding-left: 200px;
+	width:100%;
+}
+
+h2.titulo-album {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.album-title-text:hover, .album-title-text:hover {
+	text-decoration:none;
+}
+
+.ano-album {
+  color: #555555;
+  font-size: 11px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.playlist-album {
+	min-height:169px;
+	padding-left:200px;
+	padding-bottom:20px;
+}
+
+.lista {}
+
+.num-disco {
+  background:#D5D4D2;
+  border-radius: 10px 10px 10px 10px;
+  color: #343434;
+  display: inline-block;
+  font: bold 12px/1 'Lucida Grande',Tahoma,sans-serif;
+  margin: 0 0 10px;
+  padding: 3px 10px 2px 10px;
+  -moz-box-sizing: content-box;
+}
+
+.disco-artist-playlist {
+	position:absolute;
+	padding-left:168px;
+	height:32px;
+}
+
+#artista-container > * > .disco-artist-playlist {
+	position:absolute;
+	margin-left: auto;
+	font-weight:bold;
+	font-size:20px;
+	width:100%;	
+}
+
+.descripcion-artista {
+	top:20px;	
+}
+
+.descripcion-artista p {
+	top:25px;
+	position:absolute;
+	padding-left:168px;
+	text-align:justify;
+}
+
+#discos {
+	top:50px;
+	margin-top: 218px;
+	width:100%;
+}
+
+#carga {
+	background:url('../img/loading.gif') no-repeat #ECEBE8;
+	width:100%;
+	height:100%;
+	position:fixed;
+	margin-left: -170px;
+	z-index:99999;
+	background-position:center;
+	background-size:5%;	
+}
+
+.width-artist {
+	width:250px;	
+}
+
+/* Estilo para los artistas */
+.artistas-wrapper {
+	opacity:1;
+	text-align:center;
+}
+
+.caja-artista {
+  background: none repeat scroll 0 0 white;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow:  0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 2px 2px 2px 2px;
+  cursor: default;
+  display: inline-block;
+  font-weight: 300;
+  margin: 5px 15px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.imgartista-wrapper {
+	height: 178px;
+	border-radius:2px 2px 0 0;
+	cursor:pointer;
+	position:relative;
+	width:100%;
+}	
+	
+.imgartista-interior-wrapper {	
+  border-radius: 2px 2px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.img-artista {
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+  vertical-align: top;
+  width: 430px;
+  margin-top:-40px;
+
+}
+
+.detalles-artista {
+	opacity:1;
+	margin: 7px 0px;
+	overflow:hidden;
+	font-weight:300;
+	white-space:nowrap;
+	visibility: visible;
+	background:#919191;
+	position:absolute;
+	margin-top:130px;
+	width:100%;
+	height:40px;
+	text-shadow: 2px 2px black;
+	
+}
+	
+.nombre-artista {
+  opacity:1;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 40px;
+  max-height: 38px;
+  text-align:center;
+}
+
+.hover-layer:hover {
+	opacity:0;	
+}
+
+.hover-layer {
+	position:absolute;
+	background:black;
+	top:0;
+	width:100%;
+	height:100%;
+	opacity:.7;
+	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+/* Fin estilo para los artistas **/
+
+#no-script {
+	position:absolute;
+	z-index:9999;
+	margin-left: 150px;
+}
+
+/* Estilo discos*/
+
+.disco-wrapper {
+  background: none repeat scroll 0 0 white;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  display: inline-block;
+  font-weight: 300;
+  margin: 5px 22px 22px 5px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 160px;
+}
+
+
+.novedades_wrapper {
+	margin: 0 0 20px 0px;
+	
+}
+
+.imagen-disco-wrapper {
+  height:160px;
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.inner-imagen-disco {
+  border-radius: 2px 2px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.imagen-disco {	
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+  height: 100%;
+  vertical-align: top;
+  width: 100%;
+  border:medium none;	
+}
+
+.detalles-disco {
+  margin: 7px 10px;
+  overflow: hidden;
+}
+
+.titulo-disco {
+  color: #333333;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  max-height: 38px;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.subtitulo-artista {
+  color: #AAAAAA;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  margin: 1px 0;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/*
+ * Mi cuenta 
+ * */
+
+#datos-container, #cerrar-sesion-container, #cuenta-wrapper {
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#cerrar-sesion-container {
+	margin-bottom:70px;
+}
+
+#cuenta-wrapper {
+	width: 350px;
+	background:white;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	
+}
+
+h2.username {
+	font-size:20px;
+	margin-left: 25px;
+	
+}
+
+#usuario-micuenta {
+	margin-top:70px;
+	position:relative;
+	width: 350px;
+	margin-left:auto;
+	margin-right: auto;
+	
+}
