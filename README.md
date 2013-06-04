@@ -1,6 +1,6 @@
 ![ScreenShot](https://raw.github.com/colmo/supersub/master/img/logo-login.png)
 
-Supersub a frontend for Subsonic
+Supersub, a frontend for Subsonic
 
 Remember to edit the file "js/config.js" and setup the server address.
 
